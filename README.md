@@ -9,5 +9,8 @@ Notes :
 - attention layer consists of : query, key-value pair, which are mapped to an output. Weight for each value is calculated through a compatibility function between the query and key, scaled by 1/sqrt(dk) where dk is the dimension of query or key, author suspects that without scaling, large dk leads to a softmax output nearing the diminishing gradient.
 -
 
+3. A multi-task U-Net for segmentation with lazy labels
+- 
+
 ## useful learning links
 understanding LSTM : https://colah.github.io/posts/2015-08-Understanding-LSTMs/
