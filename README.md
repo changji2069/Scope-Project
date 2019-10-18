@@ -16,7 +16,12 @@ Notes :
 - Segmentation : using a few strong annotations, produce pixel-wise classification.
 - All three tasks share the same contracting path, but this paper introduces a new multi-task block for the expansive path.
 - Use a weighted loss function over the samples to account for missing annotations as the weak/strong annotations are shared between the three tasks
-- For each multi-task block : Detection and Segmentation have a common path similar to decoder part of standard U-net, they share same weights, use the same concatenation with feature maps from contracting path via the skip connections. however, inserted an additional residual sub-block for Segmentation to allow for extra network parameters to learn about object boundary localization. For Segmentation, path built on the top of Detection/Segmentation, with long skip connections starting from the sub-blocks of the Detection/Segmentation path, these extract higher resolution features from Segmentation task and use them in the Separation. 
+- For each multi-task block : Detection and Segmentation have a common path similar to decoder part of standard U-net, they share the same weights, use the same concatenation with feature maps from contracting path via the skip connections. However, inserted an additional residual sub-block for Segmentation to allow for extra network parameters to learn about object boundary localization. For Separation, path built on the top of Detection/Segmentation, with long skip connections starting from the sub-blocks of the Detection/Segmentation path, these extract higher resolution features from Segmentation task and use them in the Separation. Apply softmax after the last multi-task block.
+- 6 spatial resolutions, input images of 256x256. For contracting path : down-sampling via max-pooling, each contracting block has a conv layer, a batch normalization, followed by leaky ReLU 0.01. For expansive path : up-sampled by bilinear interpolation
+- Lazy-labelling : first step consists of rough scribbles on the detection regions, second step is on labelling the interface of close objects, for the third step, Grabcut (graph-cut based method) is used to generate accurate (strong) labels, where corrections will be needed.
+- dataset : 20 images, only 2 with strong annotations, 15 weak annotations for task 1, and 20 interfaces annotations for task 2. Validation set with 6 images containing all annotations.
+- data augmentation : random rotation, random crop, random flipping
+- training : batch size 16, Adam optimizer
 
 ## useful learning links
 understanding LSTM : https://colah.github.io/posts/2015-08-Understanding-LSTMs/
