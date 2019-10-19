@@ -1,4 +1,4 @@
-# NLP-Project
+# Literatures
 
 ## papers
 1. Show, Attend and Tell : https://arxiv.org/pdf/1502.03044v2.pdf#cite.Pascanu2014
