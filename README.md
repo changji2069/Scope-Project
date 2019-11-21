@@ -84,4 +84,19 @@ understanding LSTM : https://colah.github.io/posts/2015-08-Understanding-LSTMs/
 
 ### Feedback
 - from Data Mining Team 
-- 
+- from Network Design Team
+- using these feedback, finetune our preprocessing requirements
+
+### What we can do now
+- look for good/popular packages for the type of pre-processing we're sure to need (provide links, package name, tutorials, sample script to demonstrate, etc.)
+## stemming (Areeg)
+-
+## normalization (for tweets) (Areeg)
+-
+## stop-word removal (CJ)
+-
+## text-enrichment (CJ)
+-
+## lowercasing (because capital may indicate special nouns or other useful information)
+-
+
