@@ -63,7 +63,7 @@ understanding LSTM : https://colah.github.io/posts/2015-08-Understanding-LSTMs/
 - part-of-speech tagging / grammatical tagging
 
 ### Rule of Thumb
-- for a general/well written texts (which is true in our case), coupled with lots of data (also true in our case), we need light pre-processing, while text augmentation could be useful but not critical
+- for a general/well written texts (which is true for news data), coupled with lots of data (also true for news data), we need light pre-processing, while text augmentation could be useful but not critical
 
 ### - - - - - - - - - - - - - - - - - - - - - - - - -
 ## Upstream dependency
@@ -71,7 +71,7 @@ understanding LSTM : https://colah.github.io/posts/2015-08-Understanding-LSTMs/
 ## Downstream dependency
 - depending on the model we work with, chances are the papers will have already suggested the necessary pre-processing steps optimal for that particular model
 ## Others
-- provided that we work with plain text, the next thing to look out for would be the domain, in our case, we're working with news content, so expecting for clean, well formatted texts, greatly reduces the amount of pre-processing required
+- provided that we work with plain text, the next thing to look out for would be the domain, in our case, we're working with different data such as news content (so expecting for clean, well formatted texts, greatly reduces the amount of pre-processing required), tweets (dirtier data), video (may be dirty), podcast (may be dirty).
 
 ## Tutorial
 
