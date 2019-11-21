@@ -25,3 +25,43 @@ Notes :
 
 ## useful learning links
 understanding LSTM : https://colah.github.io/posts/2015-08-Understanding-LSTMs/
+
+## Data Preprocessing for NLP
+
+### Tokenization
+- segmentation
+
+### Normalization
+
+#### Lowercasing 
+- useful for small, sparse dataset
+- depends on the task (approach + domain)
+- for our task of topic classication, overall theme can be captured by the lowercase data, though if large dataset is available, not lowercasing can improve accuracy
+
+#### Stemming
+- useful in general
+- Porters algorithm
+
+#### Lemmatization
+- similar but more liguistically robust than stemming, e.g. 'better' -> 'good'
+- WordNet
+- however, this paper titled 'On the Role of Text Preprocessing in Neural Network Architectures: An Evaluation Study on Text Categorization and Sentiment Analysis' (https://arxiv.org/pdf/1707.01780.pdf) finds that lemmatization has no significant impact on accuracy for text classication with neural architectures.
+
+#### Stopword Removal
+- a simple custom-built stopword library or a word-count-percentage-threshold removal
+- more research to determine its effectiveness in topic classification
+
+#### Other normalizations
+- useful for social media content swamped by noise such as 'tomorrow' being represented by '2moro'/'2morrow'/'tmr'/etc.
+- news content are usually clean, so not a necessary step (looking at Scope as a whole, the specific step to pull relevant Tweets for a particular news headline may require normalization, but for topic classification alone it is not be necessary)
+
+### Noise Removal
+- domain specific, comprises of punctuation/special character/number/html formatting/domain specific keyword removal
+
+### Text Enrichment / Augmentation
+- part-of-speech tagging / grammatical tagging
+
+### Rule of Thumb
+- for a general/well written texts (which is true in our case), coupled with lots of data (also true in our case), we need light pre-processing, while text augmentation could be useful but not critical
+
+
