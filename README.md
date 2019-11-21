@@ -29,7 +29,7 @@ understanding LSTM : https://colah.github.io/posts/2015-08-Understanding-LSTMs/
 ## Data Preprocessing for NLP
 
 ### Tokenization
-- segmentation
+- segmentation / sentence boundary determination 
 
 ### Normalization
 
@@ -61,7 +61,6 @@ understanding LSTM : https://colah.github.io/posts/2015-08-Understanding-LSTMs/
 
 ### Text Enrichment / Augmentation
 - part-of-speech tagging / grammatical tagging
-- sentence boundary determination
 
 ### Rule of Thumb
 - for a general/well written texts (which is true in our case), coupled with lots of data (also true in our case), we need light pre-processing, while text augmentation could be useful but not critical
