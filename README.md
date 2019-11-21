@@ -73,3 +73,6 @@ understanding LSTM : https://colah.github.io/posts/2015-08-Understanding-LSTMs/
 ## Others
 - provided that we work with plain text, the next thing to look out for would be the domain, in our case, we're working with news content, so expecting for clean, well formatted texts, greatly reduces the amount of pre-processing required
 
+## Tutorial
+
+## Meeting 1 (21st of November 2019)
