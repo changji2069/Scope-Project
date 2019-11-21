@@ -76,3 +76,12 @@ understanding LSTM : https://colah.github.io/posts/2015-08-Understanding-LSTMs/
 ## Tutorial
 
 ## Meeting 1 (21st of November 2019)
+### Type of data
+- videos (description, title, transcript)
+- news (title, body)
+- tweets (author, body, hashtags)
+- (no source yet) podcast (transcript)
+
+### Feedback
+- from Data Mining Team 
+- 
