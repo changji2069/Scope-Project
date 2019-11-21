@@ -54,7 +54,7 @@ understanding LSTM : https://colah.github.io/posts/2015-08-Understanding-LSTMs/
 
 #### Other normalizations
 - useful for social media content swamped by noise such as 'tomorrow' being represented by '2moro'/'2morrow'/'tmr'/etc.
-- news content are usually clean, so not a necessary step (looking at Scope as a whole, the specific step to pull relevant Tweets for a particular news headline may require normalization, but for topic classification alone it is not be necessary)
+- news content are usually clean, so not a necessary step (looking at Scope as a whole, the specific step to pull relevant Tweets for a particular news headline may require normalization, but for news topic classification alone it is not be necessary)
 
 ### Noise Removal
 - domain specific, comprises of punctuation/special character/number/html formatting/domain specific keyword removal
