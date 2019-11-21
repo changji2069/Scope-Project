@@ -50,6 +50,7 @@ understanding LSTM : https://colah.github.io/posts/2015-08-Understanding-LSTMs/
 #### Stopword Removal
 - a simple custom-built stopword library or a word-count-percentage-threshold removal
 - more research to determine its effectiveness in topic classification
+- USPTO (United States Patent and Trademark Office), which contains about 100 functional words in English
 
 #### Other normalizations
 - useful for social media content swamped by noise such as 'tomorrow' being represented by '2moro'/'2morrow'/'tmr'/etc.
@@ -60,8 +61,16 @@ understanding LSTM : https://colah.github.io/posts/2015-08-Understanding-LSTMs/
 
 ### Text Enrichment / Augmentation
 - part-of-speech tagging / grammatical tagging
+- sentence boundary determination
 
 ### Rule of Thumb
 - for a general/well written texts (which is true in our case), coupled with lots of data (also true in our case), we need light pre-processing, while text augmentation could be useful but not critical
 
+### - - - - - - - - - - - - - - - - - - - - - - - - -
+## Upstream dependency
+- data preprocessing very much depends on the data mining step. Ideally we want plain text file (.txt) with no HTML code or formatting contaminating the texts. If contamination present, additional pre-processing which involves cleaning HTML/formatting codes will be needed, can be done via regex (is there a more efficient way ... ?)
+## Downstream dependency
+- depending on the model we work with, chances are the papers will have already suggested the necessary pre-processing steps optimal for that particular model
+## Others
+- provided that we work with plain text, the next thing to look out for would be the domain, in our case, we're working with news content, so expecting for clean, well formatted texts, greatly reduces the amount of pre-processing required
 
