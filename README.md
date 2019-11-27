@@ -91,10 +91,12 @@ understanding LSTM : https://colah.github.io/posts/2015-08-Understanding-LSTMs/
 - look for good/popular packages for the type of pre-processing we're sure to need (provide links, package name, tutorials, sample script to demonstrate, etc.)
 ### stemming and lemmatization (Areeg)
 - https://www.datacamp.com/community/tutorials/stemming-lemmatization-python
-- "Stemming is the process of reducing inflection in words to their root forms such as mapping a group of words to the same stem even if the stem itself is not a valid word in the Language."
--Pyhton package: NLTK (Natural Language Tool Kit)
-  -pip install nltk
-  -
+- Stemming is the process of reducing inflection in words to their root forms such as mapping a group of words to the same stem even if the stem itself is not a valid word in the Language
+- Pyhton package: NLTK (Natural Language Tool Kit)
+- pip install nltk
+- nltk.download() - choose the punkt model
+- English stemmers are PorterStemmer and LancasterStemmer (newer)
+- 
 ### normalization (for tweets) (Areeg)
 -
 ### stop-word removal (CJ)
