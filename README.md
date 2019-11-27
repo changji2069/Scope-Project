@@ -116,3 +116,16 @@ understanding LSTM : https://colah.github.io/posts/2015-08-Understanding-LSTMs/
 ### lowercasing (because capital may indicate special nouns or other useful information)
 -
 
+## Data Mining
+
+### Sources
+- newsdata, tweets
+
+### Requirements
+- preferrably labelled
+- sources (for checking against bias)
+- newsdata (BBC has labelled data)
+- labels (depends on what the source contains, but preferrably we want to create our own hierarchical label, scraping news from hierarchical source)
+
+- 
+- 
