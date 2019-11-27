@@ -96,9 +96,10 @@ understanding LSTM : https://colah.github.io/posts/2015-08-Understanding-LSTMs/
 - pip install nltk
 - nltk.download() - choose the punkt model
 - English stemmers are PorterStemmer and LancasterStemmer (newer)
-- 
+- PorterStemmer doesn't usually produce stems that are actual English words. Follows a set of rules to remove suffixes rather than actually having a list of possible root words. BUT this is good because it is simple and fast. Used in Information Retrieval Environments.
+-LancasterStemmer is iterative and may be heavy-stemming and hence may reduce the meaning behind the words.
 ### normalization (for tweets) (Areeg)
--
+- https://medium.com/lingvo-masino/do-you-know-about-text-normalization-a19fe3090694
 ### stop-word removal (CJ)
 -
 ### text-enrichment (CJ)
