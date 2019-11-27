@@ -100,10 +100,19 @@ understanding LSTM : https://colah.github.io/posts/2015-08-Understanding-LSTMs/
 -LancasterStemmer is iterative and may be heavy-stemming and hence may reduce the meaning behind the words.
 ### normalization (for tweets) (Areeg)
 - https://medium.com/lingvo-masino/do-you-know-about-text-normalization-a19fe3090694
+
 ### stop-word removal (CJ)
--
+- common tool : NL toolkit has a defined stopword library. May need to add/remove stopwords depending on our datasets (e.g. for news should be okay to just use standard library),  for Tweets or dirtier texts data, may require some newly defined stopwords
+- https://github.com/gaganmanku96/nlppreprocess/blob/master/nlppreprocess/nlppreprocess.py
+- allows customized stopwords addition/removal + words replace (e.g. doesn't/doesnt/dosnt -> does not, etc.)
+
 ### text-enrichment (CJ)
--
+- multiple augmentation techniques
+- word-level augmentation such as insertion and substitution augmentation using contextualized word embeddings, i.e. BERT augmentation
+- WordNet from NL Toolkit helps to find synonym words, allows for substitution augmentation
+- again, different strategy for different datasets : (news data) contextualized word embeddings augmentation + synonym replacement would be good, (tweets/social media) 
+- relevant paper (studying the effect of different augmentation strategies on social media + formal text such as news data, exactly our case) introduces augmentation on text source as well as text representation
+
 ### lowercasing (because capital may indicate special nouns or other useful information)
 -
 
