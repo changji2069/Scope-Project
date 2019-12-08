@@ -132,7 +132,8 @@ understanding LSTM : https://colah.github.io/posts/2015-08-Understanding-LSTMs/
 - 2225 documents from BBC news website with 5 class labels (business, entertainment, politics, sport, technology)
 - another 737 documents from BBCSport news website 5 class labels (athletics, cricket, football, rugby, tennis)
 - pre-processed datasets are available (stemming, stop-word removal, low term frequency filtering (count<3))
-http://mlg.ucd.ie/datasets/bbc.html
+- DATASET AVAILABL AT: http://mlg.ucd.ie/datasets/bbc.html
+- Github implementation of Dataset: https://github.com/suraj-deshmukh/BBC-Dataset-News-Classification
 
 #### News Category Dataset
 - 202,372 news headline from year 2012 to 2018 from HuffPost with 40+ class labels
@@ -148,3 +149,14 @@ https://scikit-learn.org/0.19/datasets/twenty_newsgroups.html
 #### 4 Processed Datasets (Reuters-21578 R8, Reuters-21578 R52, 20 Newsgroup, Cade12 and WebKB
 - Preprocessed with short word (count<3) removal, stop-word removal and stemming
 http://ana.cachopo.org/datasets-for-single-label-text-categorization
+
+#### UCI Machine Learning Repository (NOT SURE ABOUT THIS)
+- 422937 news pages divided into business, science and tech, health and entertainment
+- Used news aggregator in 2014
+- Provides links to news sources but no the actual data so may need scraping as above
+- https://archive.ics.uci.edu/ml/datasets/News+Aggregator
+
+#### Twitter Streaming API for Tweets
+- Tutorial to obtain these
+- http://adilmoujahid.com/posts/2014/07/twitter-analytics/
+- https://towardsdatascience.com/tweet-analytics-using-nlp-f83b9f7f7349
