@@ -127,5 +127,24 @@ understanding LSTM : https://colah.github.io/posts/2015-08-Understanding-LSTMs/
 - newsdata (BBC has labelled data)
 - labels (depends on what the source contains, but preferrably we want to create our own hierarchical label, scraping news from hierarchical source)
 
-- 
-- 
+### Datasets
+#### BBC Dataset
+- 2225 documents from BBC news website with 5 class labels (business, entertainment, politics, sport, technology)
+- another 737 documents from BBCSport news website 5 class labels (athletics, cricket, football, rugby, tennis)
+- pre-processed datasets are available (stemming, stop-word removal, low term frequency filtering (count<3))
+http://mlg.ucd.ie/datasets/bbc.html
+
+#### News Category Dataset
+- 202,372 news headline from year 2012 to 2018 from HuffPost with 40+ class labels
+- format is : category, headline, authors, link, short description, date
+- as the short description is very short, we can scrape the original news article from the provided link and then pre-process 
+https://www.kaggle.com/rmisra/news-category-dataset
+
+#### 20 Newsgroups Dataset
+- around 18,000 newsgroups post on 20 topics
+- available on scikit-learn and can be fetched directly with flexible custimisation such as loading only a sub-selection of categories, filtering newsgroup-related metadata (e.g. headers, footers, quotes) for a more realistic representation of the news dataset, etc.
+https://scikit-learn.org/0.19/datasets/twenty_newsgroups.html
+
+#### 4 Processed Datasets (Reuters-21578 R8, Reuters-21578 R52, 20 Newsgroup, Cade12 and WebKB
+- Preprocessed with short word (count<3) removal, stop-word removal and stemming
+http://ana.cachopo.org/datasets-for-single-label-text-categorization
