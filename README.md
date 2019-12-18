@@ -161,3 +161,15 @@ http://ana.cachopo.org/datasets-for-single-label-text-categorization
 - Tutorial to obtain these
 - http://adilmoujahid.com/posts/2014/07/twitter-analytics/
 - https://towardsdatascience.com/tweet-analytics-using-nlp-f83b9f7f7349
+
+#### Questions on Dataset :
+summary of dataset : 
+1. 20 Newsgroup in 4 preprocessed forms
+- lowercased, tabs/punctuation replaced by space
+- the above + remove short words < length 3
+- the above + remove stop-word
+- the above + stemmed
+
+2. BBC 
+- full text
+- remove stop-word, remove low count term <3, stemmed
