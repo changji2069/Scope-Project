@@ -162,7 +162,7 @@ http://ana.cachopo.org/datasets-for-single-label-text-categorization
 - http://adilmoujahid.com/posts/2014/07/twitter-analytics/
 - https://towardsdatascience.com/tweet-analytics-using-nlp-f83b9f7f7349
 
-#### Questions on Dataset :
+#### Dataset :
 summary of dataset : 
 1. 20 Newsgroup in 4 preprocessed forms
 - lowercased, tabs/punctuation replaced by space
@@ -173,3 +173,51 @@ summary of dataset :
 2. BBC 
 - full text
 - remove stop-word, remove low count term <3, stemmed
+
+#### Dataset Category Filtering : 
+R8
+acq/crude/grain/interest/money-fx/trade -> economic/business
+ship -> politics
+earn -> removed
+
+R52
+acq/alum/bop/cocoa/coffee/copper/cotton/cpi/cpu/crude/dlr/fuel/gas/gnp/gold/grain/heat/housing/income/instal-debt/interest/ipi/iron-steel/jet/jobs/lead/lumber/money-fx/money-supply/nat-gas/nickel/orange/pet-chem/platinum/potato/reserves/retail/rubber/trade/wpi/ -> economic/business
+ship -> politics
+carcass/earn/lei/livestock/meal-feed/strategic-metal/veg-oil/zinc/sugar/tea/tin -> remove
+
+20NG
+alt.atheism/soc.religion.christian/talk.religion.misc -> religion
+comp.graphics/comp.os.ms-windows.misc/comp.sys.ibm.pc.hardware/comp.sys.mac.hardware/comp.windows.x/sci.crypt/sci.electronics/sci.med/sci.space/ -> technology
+talk.politics.guns/talk.politics.mideast/talk.politics.misc/ -> politics
+rec.sport.baseball/rec.sport.hockey -> sports
+misc.forsale/rec.autos/rec.motorcycles -> remove
+
+Kaggle News-Category-Dataset
+'ARTS','ARTS & CULTURE' -> arts
+'COMEDY','ENTERTAINMENT','MEDIA' -> entertainment
+'BLACK VOICES' -> black voices
+'COLLEGE','EDUCATION' -> education
+'BUSINESS', -> business
+'CRIME' -> crime
+'GOOD NEWS' -> good news
+'GREEN' -> green
+'HEALTHY LIVING -> health
+'IMPACT' -> impact
+'LATINO VOICES -> latino voices
+'PARENTS' -> parents
+'POLITICS' -> politics
+'QUEER VOICES' -> LGBTQ
+'RELIGION' -> religion
+'SCIENCE','TECH' -> tech
+'SPORTS' -> sport
+'TASTE' -> food
+'THE WORLDPOST','WORLDPOST','WORLD NEWS' -> world
+'TRAVEL' -> travel
+'WOMEN' -> women
+'STYLE', 'WEIRD NEWS','FIFTY' -> remove (too few descriptions/too random)
+preprocess :  remove date, link, authors, category -> type
+              short_description > 10 words,
+              headline + short_description -> news
+
+
+
