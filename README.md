@@ -145,6 +145,7 @@ https://www.kaggle.com/rmisra/news-category-dataset
 - around 18,000 newsgroups post on 20 topics
 - available on scikit-learn and can be fetched directly with flexible custimisation such as loading only a sub-selection of categories, filtering newsgroup-related metadata (e.g. headers, footers, quotes) for a more realistic representation of the news dataset, etc.
 https://scikit-learn.org/0.19/datasets/twenty_newsgroups.html
+- UPDATE: Its news labels are weird; waiting on a decision on how to deal with them. (Areeg)
 
 #### 4 Processed Datasets (Reuters-21578 R8, Reuters-21578 R52, 20 Newsgroup, Cade12 and WebKB
 - Preprocessed with short word (count<3) removal, stop-word removal and stemming
