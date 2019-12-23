@@ -3,8 +3,6 @@ import csv
 import pandas as pd
 
 
-csv_path = 'bbc_dataset.csv'
-json_path = 'bbc_dataset.json'
 
 def csv_to_json_trial(csv_path,json_path):
 	data = {}
@@ -20,7 +18,7 @@ def csv_to_json_trial(csv_path,json_path):
 	return data
 
 def csv_to_json(csv_path,json_path):
-	data_df = pd.read_csv(csv_path, usecols = ['label', 'data'])
+	data_df = pd.read_csv(csv_path, usecols = ['label', 'data'], encoding = 'ISO-8859-1')
 	#use orient = 'records' to get each data point and its label paired
 	export = data_df.to_json(json_path, orient = 'records')
 
@@ -29,8 +27,8 @@ def csv_to_json(csv_path,json_path):
 
 
 if __name__ == '__main__':
-	csv_path = 'trial_data.csv'
-	json_path = 'trial_data.json'
+	csv_path = 'bbc_dataset.csv'
+	json_path = 'bbc_dataset.json'
 	#data = csv_to_json(csv_path,json_path)
 	#print(data)
 	data_df = csv_to_json(csv_path,json_path)
