@@ -37,10 +37,17 @@ categories_str = ['arts', 'entertainment', 'black_voices', 'education', 'busines
               'health', 'impact', 'latino_voices', 'parents', 'LGBTQ', 'religion', 'tech', 'sport', 'food',
               'world', 'travel', 'women','politics']
 cate_pair = zip(categories_str, categories )
+#cate_pair format is [('arts',arts), ('entertainment', entertainment),.....]
+
+#print(df_kaggle.category)
 
 for name, category in cate_pair:
     for type in category:
         df_kaggle.category = df_kaggle.category.map(lambda x: name if x == type else x)
+
+#print(df_kaggle.category)
+print(df_kaggle)
+
 
 # remove confusing categories
 remove_list = ['STYLE', 'WEIRD NEWS','FIFTY']
@@ -52,9 +59,19 @@ delete = ['date','link','authors']
 for _ in delete :
     del df_kaggle[_]
 df_kaggle.rename(columns={'category':'type'})
+print(df_kaggle.headline)
+
+#df_kaggle.text = df_kaggle.headline + " " + df_kaggle.short_description
+
+
 
 # using headlines and short_description as 'text' (by defining a new column named 'text')
-df_kaggle['text'] = df_kaggle.headline + " " + df_kaggle.short_description
+#df_kaggle['text'] = df_kaggle.headline + " " + df_kaggle.short_description
+
+#make a copy of short_description column
+new = df_kaggle["short_description"].copy()
+#na_rep deals with NaNs which are empty cells in the df
+df_kaggle['text'] = df_kaggle["headline"].str.cat(new, sep =" ", na_rep = "")
 delete2 = ['headline', 'short_description']
 for _ in delete2:
     del df_kaggle[_]
@@ -66,3 +83,4 @@ print(newcat.size())
 # saving as json and csv
 df_kaggle.to_json('kaggle_filtered.json')
 df_kaggle.to_csv('kaggle_filtered.csv')
+
