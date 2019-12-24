@@ -20,6 +20,12 @@ for csv_file in os.listdir('processed_dataset/train')[:1]:
         if len(df['news'][i].split()) < 5:
             df = df.drop([i])
 
+    #remove words with length < 3:
+    def remove_short_word(text): 
+        return ' '.join(word for word in text.split() if len(word)>3)
+    for i in range(len(df['news'])):
+        df['news'][i] = remove_short_word(df['news'][i])
+
     # remove punctuations
     def remove_punctuation(text):
         string_no_punctuation = text.translate(str.maketrans('', '', string.punctuation))
